@@ -1,0 +1,27 @@
+/* .card-container {
+    perspective: 800px;
+} */
+
+.card {
+    width: 180px;
+    height: 300px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform .75s cubic-bezier(0.4, 0.03, 0.5, 0.9);
+}
+
+.card_image {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    backface-visibility: hidden;
+    /* inset: 0; */
+    object-fit: cover;
+}
+
+.card_image:nth-child(2),
+.card:hover {
+    transform: rotate3d(1, 1, 0, 180deg);
+}
